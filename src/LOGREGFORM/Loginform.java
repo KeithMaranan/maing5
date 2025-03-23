@@ -162,14 +162,14 @@ public class Loginform extends javax.swing.JFrame {
 
                 query = "SELECT * FROM stlogreg WHERE email=  '" + email + "'";
                 ResultSet rs = stmt.executeQuery(query);
-                
+
                 while (rs.next()) {
                     password = rs.getString("password");
                     notfound = 1;
                 }
                 if (notfound == 1 & password.equals(password)) {
                     JOptionPane.showMessageDialog(this, "Login Successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
-                    
+
                     Dashboard dashboard = new Dashboard();
                     dashboard.setVisible(true);
                     this.dispose();
@@ -187,7 +187,7 @@ public class Loginform extends javax.swing.JFrame {
     }//GEN-LAST:event_loginbuttonActionPerformed
 
     public static void main(String args[]) {
- 
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
